@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package records;
+
+option go_package = "okb/test-task/api/proto;recordspb";
+
+service RecordService {
+  rpc GetRecords(GetRecordsRequest) returns (GetRecordsResponse);
+}
+
+message GetRecordsRequest {}
+
+message GetRecordsResponse {
+  repeated Record records = 1;
+}
+
+message Record {
+  string id     = 1;
+  string name   = 2;
+  double amount = 3;
+}

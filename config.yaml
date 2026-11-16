@@ -1,0 +1,28 @@
+app:
+  log_level: info
+  run_timeout: 5m
+
+postgres:
+  host: localhost
+  port: 5432
+  database: etl
+  user: etl
+  max_conns: 10
+  query_timeout: 30s
+  table: source_records
+
+grpc:
+  target: localhost:9090
+  timeout: 10s
+
+kafka:
+  brokers: ["localhost:9092"]
+  topic: etl.results
+
+minio:
+  endpoint: localhost:9000
+  bucket: etl-results
+  use_ssl: false
+
+input:
+  config_file: ./configs/input.json

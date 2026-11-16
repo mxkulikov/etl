@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "records": [
+    { "id": "rec-1", "name": "Alice", "amount": 100, "tags": ["a", "b"] },
+    { "id": "rec-2", "name": "Bob",   "amount": 200, "tags": [] },
+    { "id": "",      "name": "Broken", "amount": 0 },
+    { "name": "NoID", "amount": 50 }
+  ]
+}
